@@ -1,0 +1,124 @@
+/* COLORS:
+ * #1E1E1E: EERIE BLACK
+ * #7F050A: MAROON
+ * #EE2C2B: PERMANENT GERANIUM LAKE
+ * #FFFE24: DAFFODIL
+ */
+
+* { box-sizing: border-box; }
+a { text-decoration: none; }
+
+body {
+	line-height: 1.6;
+	color: #ee2c2b;
+    background-color: #1e1e1e;
+    font-family: 'Merriweather', serif; /* serif imported font (Merriweather) from fonts.google.com for important text */
+}
+
+.container-fluid {
+    width: 75%;
+    margin: auto;
+}
+
+main.content ul li,
+.btn,
+.nav-link {
+    font-family: 'Open Sans', sans-serif; /* sans-serif imported font (Open Sans) from fonts.google.com for standard text */
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    padding: 5px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header a { color: #f5f5f5; }
+
+header img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/* NAV */
+/* overrides bootstrap nav css*/
+
+nav.navbar {
+    border-radius: 5px;
+    border: 2px solid #43464b;
+}
+
+button.navbar-toggler {
+    border: 2px solid #f5f5f5;
+}
+
+.custom-toggler, .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(245, 245, 245, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}/* adds customizability to the bootstrap nav hamburger icon */
+
+a.nav-link { color: #666; }
+a.active { color: #f5f5f5; }
+a.nav-link:hover { color: #ee2c2b }
+
+/* GUIDE */
+
+.guideHeading {
+    width: 100%;
+    display: block;
+}
+
+.guideHeading h3,
+button {
+    display: inline-block;
+}
+
+.guideHeading h3 {
+    float: left;
+}
+
+.guideHeading button {
+    float: right;
+}
+
+.guideHeading:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.headingContent {
+    display: block;
+}
+
+p{color:#f5f5f5}
+
+/* CHECKBOXES */
+
+.input-group { padding: 0; }
+
+ul .input-group-text label {
+    margin-bottom: 0;
+}
+
+ul .input-group-text {
+    width: 7.2em;
+    margin: 1%;
+}
+
+.btns {
+    display: block;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin: auto;
+}
