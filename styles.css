@@ -7,23 +7,32 @@
 
 * { box-sizing: border-box; }
 a { text-decoration: none; }
+h1,h2,h3,h4,h5,h6 {color: #ee2c2b }
 
 body {
 	line-height: 1.6;
-	color: #ee2c2b;
+	color:#f5f5f5;
     background-color: #1e1e1e;
     font-family: 'Merriweather', serif; /* serif imported font (Merriweather) from fonts.google.com for important text */
 }
 
 .container-fluid {
-    width: 75%;
+    width: 100%;
     margin: auto;
+    padding: 0;
 }
 
-main.content ul li,
+main ul li,
 .btn,
-.nav-link {
+.nav-link,
+p {
     font-family: 'Open Sans', sans-serif; /* sans-serif imported font (Open Sans) from fonts.google.com for standard text */
+}
+
+.content {
+    width: 75%;
+    display: block;
+    margin: auto;
 }
 
 /* HEADER */
@@ -100,6 +109,19 @@ button {
 
 p{color:#f5f5f5}
 
+/* NOTE */
+
+.note {
+    background-color: #344;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.note p {
+    color: #ccc;
+    margin: 0;
+}
+
 /* CHECKBOXES */
 
 .input-group { padding: 0; }
@@ -121,4 +143,21 @@ ul .input-group-text {
 .btn {
     display: inline-block;
     margin: auto;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #344;
+}
+
+footer p, 
+h6 {
+    margin-bottom: 0;
+    color: #ccc;
+}
+
+footer p {
+    font-size: 0.9rem;    
 }
