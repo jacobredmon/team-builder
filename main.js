@@ -2,37 +2,37 @@
 //var template = { role: "", name: "" }
 
 // character objects
-//tanks
-var ledin = { role: "tank", name: "Ledin" }
-var vargas = { role: "tank", name: "Vargas" }
-var aaron = { role: "tank", name: "Aaron" }
-var pierre = { role: "tank", name: "Pierre" }
-var grenier = { role: "tank", name: "Grenier" }
-//supports
-var bozel = { role: "support", name: "Bozel" }
-var hein = { role: "support", name: "Hein" }
-var bernhardt = { role: "support", name: "Bernhardt" }
-var matthew = { role: "support", name: "Matthew" }
-var diehardt = { role: "support", name: "Diehardt" }
-//healers
-var liana = { role: "healer", name: "Liana" }
-var tiaris = { role: "healer", name: "Tiaris" }
-var sophia = { role: "healer", name: "Sophia" }
-var anna = { role: "healer", name: "Anna" }
-var almeda = { role: "healer", name: "Almeda"}
-//dps
-var cherie = { role: "dps", name: "Cherie" }
-var chris = { role: "dps", name: "Chris" }
-var elwin = { role: "dps", name: "Elwin" }
-var lance = { role: "dps", name: "Lance" }
-var liffany = { role: "dps", name: "Liffany" }
+//Tanks
+var ledin = { role: "Tank", name: "Ledin" }
+var vargas = { role: "Tank", name: "Vargas" }
+var aaron = { role: "Tank", name: "Aaron" }
+var pierre = { role: "Tank", name: "Pierre" }
+var grenier = { role: "Tank", name: "Grenier" }
+//Supports
+var bozel = { role: "Support", name: "Bozel" }
+var hein = { role: "Support", name: "Hein" }
+var bernhardt = { role: "Support", name: "Bernhardt" }
+var matthew = { role: "Support", name: "Matthew" }
+var diehardt = { role: "Support", name: "Diehardt" }
+//Healers
+var liana = { role: "Healer", name: "Liana" }
+var tiaris = { role: "Healer", name: "Tiaris" }
+var sophia = { role: "Healer", name: "Sophia" }
+var anna = { role: "Healer", name: "Anna" }
+var almeda = { role: "Healer", name: "Almeda"}
+//DPS
+var cherie = { role: "DPS", name: "Cherie" }
+var chris = { role: "DPS", name: "Chris" }
+var elwin = { role: "DPS", name: "Elwin" }
+var lance = { role: "DPS", name: "Lance" }
+var liffany = { role: "DPS", name: "Liffany" }
 
 // filler character objects for this file
-var tank = { role: "tank", name: "empty" }
-var healer = { role: "healer", name: "empty" }
-var support = { role: "support", name: "empty" }
-var dps1 = { role: "dps", name: "empty" }
-var dps2 = { role: "dps", name: "empty" }
+var Tank = { role: "Tank", name: "No Tank selected" }
+var Healer = { role: "Healer", name: "No Healer selected" }
+var Support = { role: "Support", name: "No Support selected" }
+var DPS1 = { role: "DPS", name: "No DPS1 selected" }
+var DPS2 = { role: "DPS", name: "No DPS2 selected" }
 
 
 // --- LOGIC FOR GETTING INFO FROM WEBPAGE ---
@@ -40,7 +40,7 @@ var dps2 = { role: "dps", name: "empty" }
 var chosen = [];
 function submitCharacters()
 {
-    var team = [tank, healer, support, dps1, dps2];
+    var team = [Tank, Healer, Support, DPS1, DPS2];
     
     /*
      * gets all checked characters and puts them into the chosen array
@@ -55,26 +55,26 @@ function submitCharacters()
      */
     while(chosen.length != 0)
     {
-        if(chosen[0].role === "tank" && team[0] === tank)
+        if(chosen[0].role === "Tank" && team[0] === Tank)
         { 
             team[0] = chosen[0]; 
         }
-        if(chosen[0].role === "healer" && team[1] === healer)
+        if(chosen[0].role === "Healer" && team[1] === Healer)
         { 
             team[1] = chosen[0]; 
         }
-        if(chosen[0].role === "support" && team[2] === support)
+        if(chosen[0].role === "Support" && team[2] === Support)
         { 
             team[2] = chosen[0]; 
         }
-        if(chosen[0].role === "dps" && team[3] === dps1)
+        if(chosen[0].role === "DPS" && team[3] === DPS1)
         { 
             team[3] = chosen[0]; 
         }
-        if(chosen[0].role === "dps" && team[4] === dps2 && team[3].name != chosen[0].name)
+        if(chosen[0].role === "DPS" && team[4] === DPS2 && team[3].name != chosen[0].name)
         { 
             team[4] = chosen[0]; 
-        } // ensures any chosen dps's are not duplicated in both slots
+        } // ensures any chosen DPS's are not duplicated in both slots
         chosen.shift();
     }
     

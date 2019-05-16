@@ -1,1 +1,2 @@
 # team-builder
+Langrisser Team Builder is an UNFINISHED website to help players of the Langrisser Mobile game create teams based on the chracters they have. Currently, it is not useful, but may be updated in the future. 
